@@ -123,6 +123,7 @@ class MotorbikeController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('Motorbike');
+		$dataProvider->pagination->pageSize=5;
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
