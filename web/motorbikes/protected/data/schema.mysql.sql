@@ -1,3 +1,4 @@
+DROP DATABASE motorbike;
 CREATE DATABASE motorbike;
 
 USE motorbike;
@@ -12,6 +13,7 @@ CREATE TABLE tbl_user (
 
 CREATE TABLE tbl_motorbike (
     id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     make VARCHAR(128) NOT NULL,
     model VARCHAR(128) NOT NULL,
     cc INTEGER NOT NULL,

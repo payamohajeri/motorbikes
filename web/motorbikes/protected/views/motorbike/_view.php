@@ -9,6 +9,10 @@
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('created')); ?>:</b>
+	<?php echo CHtml::encode($data->created); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('make')); ?>:</b>
 	<?php echo CHtml::encode($data->make); ?>
 	<br />
@@ -29,11 +33,11 @@
 	<?php echo CHtml::encode($data->weight); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
 	<?php echo CHtml::encode($data->image); ?>
 	<br />

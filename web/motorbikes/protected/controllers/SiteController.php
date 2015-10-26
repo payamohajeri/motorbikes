@@ -31,6 +31,12 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		
 		$this->render('index');
+
+		// $dataProvider=new CActiveDataProvider('Motorbike');
+		// // $dataProvider->pagination->pageSize=2;
+		// $this->render('index',array(
+		// 	'dataProvider'=>$dataProvider,
+		// ));
 	}
 
 	/**

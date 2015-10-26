@@ -20,6 +20,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'created'); ?>
+		<?php echo $form->textField($model,'created'); ?>
+		<?php echo $form->error($model,'created'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'make'); ?>
 		<?php echo $form->textField($model,'make',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'make'); ?>
