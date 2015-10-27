@@ -34,13 +34,18 @@
 	<br />
 
 	<?php /*
+	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
 	<?php echo CHtml::encode($data->price); ?>
 	<br />
 
+	*/ ?>
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('image')); ?>:</b>
-	<?php echo CHtml::encode($data->image); ?>
+	<?php echo CHtml::image( Yii::app()->request->baseUrl .'/images/upload/'. $data->image); ?>
 	<br />
+
+	<?php /*
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comment')); ?>:</b>
 	<?php echo CHtml::encode($data->comment); ?>

@@ -20,6 +20,9 @@ class Motorbike extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	
+	public $oldImage;
+
 	public function tableName()
 	{
 		return 'tbl_motorbike';
@@ -35,10 +38,11 @@ class Motorbike extends CActiveRecord
 		return array(
 			array('make, model, cc, color, weight, price, image, comment', 'required'),
 			array('cc, weight, price', 'numerical', 'integerOnly'=>true),
-			array('make, model, color, image, comment', 'length', 'max'=>128),
+			array('make, model, color, comment', 'length', 'max'=>128),
+			array('image', 'file','allowEmpty'=>true, 'types'=>'jpg, gif, png', 'safe' => true, 'maxSize' => (1024 * 300),),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, created, make, model, cc, color, weight, price, image, comment', 'safe', 'on'=>'search'),
+			array('id, created, make, model, cc, color, weight, price, comment', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -116,4 +120,35 @@ class Motorbike extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    // public function afterFind() {
+    //     parent::afterFind();
+    //     $this->oldImage = $this->image;
+    // }
+
+    // public function afterDelete() {
+    //     $this->deleteImagem();
+    //     return parent::afterDelete();
+    // }
+
+    // public function beforeSave() {
+    //     $uploadPath = Yii::app()->params['uploadPath'];
+    //     Yii::log($uploadPath, 'error');
+    //     if(is_object($this->image)) {
+    //         $this->image->setPath($uploadPath);
+    //         $this->image->saveAs();
+    //         if(!empty($this->oldImage)) {
+    //             $delete = Yii::app()->params['uploadPath'].'/'.$this->oldImage;
+    //             if(file_exists($delete)) unlink($delete);
+    //         }
+    //     }
+    //     if(empty($this->image) && !empty($this->oldImage)) $this->image = $this->oldImage;
+    //     return parent::beforeSave();
+    // }
+
+    // public function deleteImagem() {
+    //     $imagem = $this->image;
+    //     return unlink(Yii::app()->params['uploadPath'].'/'.$imagem);
+    // }
+
 }

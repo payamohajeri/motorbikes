@@ -70,8 +70,13 @@ class MotorbikeController extends Controller
 		if(isset($_POST['Motorbike']))
 		{
 			$model->attributes=$_POST['Motorbike'];
-			if($model->save())
+			$model->image=CUploadedFile::getInstance($model,'image');
+			if($model->validate())
+			{
+				$model->save();
+				$model->image->saveAs(Yii::app()->basePath.'/../images/upload/'.$model->image);
 				$this->redirect(array('view','id'=>$model->id));
+			}
 		}
 
 		$this->render('create',array(
