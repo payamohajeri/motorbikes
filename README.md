@@ -4,10 +4,10 @@ a sample project using yii
 
 here is the screenshots of my project :
 
-![Login Page](./screenshots/1-LoginPage.png)
+![Login Page](https://raw.githubusercontent.com/payamohajeri/motorbikes/master/screenshots/1-LoginPage.png?raw=true "Login Page")
 
-![List Page](./screenshots/2-ListPage.png)
+![List Page](https://raw.githubusercontent.com/payamohajeri/motorbikes/master/screenshots/2-ListPage.png?raw=true "List Page")
 
-![Manage Page ](./screenshots/3-ManagePage.png)
+![Manage Page ](https://raw.githubusercontent.com/payamohajeri/motorbikes/master/screenshots/3-ManagePage.png?raw=true "Manage Page")
 
-![Detail Page](./screenshots/4-DetailPage.png)
+![Detail Page](https://raw.githubusercontent.com/payamohajeri/motorbikes/master/screenshots/4-DetailPage.png?raw=true "Detail Page")
